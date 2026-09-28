@@ -1,0 +1,198 @@
+@import './SchoolAdminDashboard.css';
+
+/* =========================================================
+   School Settings
+   ========================================================= */
+.ss-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+  color: #6b7688;
+  font-size: 1.05rem;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+.ss-error {
+  background: #fde8ec;
+  color: #e0455a;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #e0455a;
+}
+
+.ss-success {
+  background: #e4f6ec;
+  color: #2e9e6d;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #2e9e6d;
+  font-weight: 600;
+}
+
+.ss-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ss-field {
+  margin-bottom: 18px;
+}
+
+.ss-field:last-child {
+  margin-bottom: 0;
+}
+
+.ss-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0b2340;
+  margin-bottom: 8px;
+}
+
+.ss-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #edeef2;
+  border-radius: 10px;
+  background: #f9fafb;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: #16233a;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.ss-input:focus {
+  border-color: #2f6fed;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.ss-input::placeholder {
+  color: #9ca3af;
+}
+
+textarea.ss-input {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+.ss-hint {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  color: #6b7688;
+  line-height: 1.5;
+}
+
+.ss-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ss-field--grow {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Toggle button */
+.ss-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #f1f3f5;
+  color: #6b7688;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 0.15s;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.ss-toggle__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #9ca3af;
+  transition: background 0.15s;
+}
+
+.ss-toggle--on {
+  background: #e4f6ec;
+  color: #2e9e6d;
+}
+
+.ss-toggle--on .ss-toggle__dot {
+  background: #2e9e6d;
+}
+
+/* Actions */
+.ss-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #edeef2;
+  position: sticky;
+  bottom: 0;
+  background: #f6f7fa;
+  padding-bottom: 16px;
+}
+
+.ss-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.15s;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.ss-btn--ghost {
+  background: #ffffff;
+  border: 1.5px solid #edeef2;
+  color: #0b2340;
+}
+
+.ss-btn--ghost:hover {
+  border-color: #0b2340;
+}
+
+.ss-btn--primary {
+  background: #0b2340;
+  color: #ffffff;
+}
+
+.ss-btn--primary:hover:not(:disabled) {
+  background: #16345c;
+}
+
+.ss-btn--primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 560px) {
+  .ss-actions {
+    flex-direction: column-reverse;
+  }
+  .ss-btn {
+    width: 100%;
+  }
+}

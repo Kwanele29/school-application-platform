@@ -1,0 +1,202 @@
+@import './FindSchools.css';
+
+/* =========================================================
+   Add Child page
+   ========================================================= */
+.ac-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0b2340;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ac-back:hover { color: #2f6fed; }
+
+.ac-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: linear-gradient(120deg, #eef2fb 0%, #e0e9f7 100%);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+
+.ac-hero__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #0b2340;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.ac-hero__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0b2340;
+  margin: 0 0 6px;
+}
+
+.ac-hero__sub {
+  font-size: 0.92rem;
+  color: #52606d;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 540px;
+}
+
+.ac-error {
+  background: #fde8ec;
+  color: #e0455a;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #e0455a;
+  font-weight: 600;
+}
+
+.ac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+}
+
+.ac-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(16, 30, 54, 0.06);
+  padding: 24px;
+}
+
+.ac-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0b2340;
+  margin: 0 0 20px;
+}
+
+.ac-optional {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #6b7688;
+}
+
+.ac-field {
+  margin-bottom: 18px;
+}
+
+.ac-field:last-child { margin-bottom: 0; }
+
+.ac-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.ac-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0b2340;
+  margin-bottom: 6px;
+}
+
+.ac-required { color: #e0455a; }
+
+.ac-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #edeef2;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #16233a;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.ac-input:focus {
+  border-color: #2f6fed;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+textarea.ac-input {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+.ac-hint {
+  font-size: 0.78rem;
+  color: #6b7688;
+  margin: 6px 0 0;
+}
+
+.ac-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.ac-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.ac-btn--ghost {
+  background: #ffffff;
+  border: 2px solid #edeef2;
+  color: #0b2340;
+}
+
+.ac-btn--ghost:hover {
+  border-color: #0b2340;
+  background: #f6f7fa;
+}
+
+.ac-btn--primary {
+  background: #0b2340 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 16px rgba(11, 35, 64, 0.2);
+}
+
+.ac-btn--primary:hover:not(:disabled) {
+  background: #16345c !important;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(11, 35, 64, 0.28);
+}
+
+.ac-btn--primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .ac-row { grid-template-columns: 1fr; }
+  .ac-actions { flex-direction: column-reverse; }
+  .ac-btn { width: 100%; }
+}

@@ -1,0 +1,224 @@
+/* =========================================================
+   Auth Pages — Login & Register (Full Styles)
+   ========================================================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-image: url("../assets/back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 75, 102, 0.35);
+  z-index: 0;
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 30rem;
+  width: 100%;
+  box-shadow: 0 24px 60px rgba(15, 42, 58, 0.25);
+}
+
+/* Back link */
+.auth-back {
+  display: inline-block;
+  color: #1b4b66;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: color 0.15s;
+}
+
+.auth-back:hover {
+  color: #e88a2c;
+}
+
+/* Titles */
+.auth-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #1b4b66;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.auth-subtitle {
+  font-size: 0.95rem;
+  color: #52606d;
+  text-align: center;
+  margin: 0 0 1.75rem;
+}
+
+/* Error banner */
+.auth-error {
+  background: #fef2f2;
+  color: #c0392b;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #c0392b;
+}
+
+/* -------- Google button -------- */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #ffffff;
+  color: #1f2937;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.btn-google:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-google:active {
+  transform: translateY(1px);
+}
+
+/* -------- Divider -------- */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.auth-divider span {
+  padding: 0 0.85rem;
+}
+
+/* -------- Form -------- */
+.auth-card .form-group {
+  margin-bottom: 1rem;
+}
+
+.auth-card .form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.35rem;
+}
+
+.auth-card .form-input,
+.auth-card .form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fafaf7;
+  color: #1f2937;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.auth-card .form-input:focus,
+.auth-card .form-select:focus {
+  border-color: #1b4b66;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(27, 75, 102, 0.12);
+}
+
+/* -------- Submit button -------- */
+.auth-card .btn-secondary {
+  width: 100%;
+  padding: 0.85rem;
+  background: #e88a2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+.auth-card .btn-secondary:hover:not(:disabled) {
+  background: #cf7a1f;
+  transform: translateY(-1px);
+}
+
+.auth-card .btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* -------- Bottom link -------- */
+.auth-card .text-center {
+  text-align: center;
+}
+
+.auth-card .mt-4 {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #52606d;
+}
+
+.auth-link {
+  color: #1b4b66;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+  color: #e88a2c;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,180 @@
+/* =========================================================
+   Shared Parent Sidebar
+   ========================================================= */
+
+.pd-sidebar {
+  position: relative;
+  background: #0b2340;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.pd-sidebar * {
+  box-sizing: border-box;
+}
+
+.pd-sidebar button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ---------- Brand ---------- */
+.pd-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 4px 32px;
+}
+
+.pd-sidebar__brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.pd-sidebar__brand-text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+/* ---------- Nav ---------- */
+.pd-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pd-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pd-nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.pd-nav-item--active {
+  background: #16345c;
+  color: #ffffff;
+}
+
+.pd-nav-item__icon {
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.pd-nav-item__label {
+  flex: 1;
+}
+
+.pd-nav-item__badge {
+  background: #e0455a;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Logout ---------- */
+.pd-sidebar__logout {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pd-sidebar__logout:hover {
+  background: rgba(224, 69, 90, 0.15);
+  color: #ff8b8b;
+}
+
+.pd-sidebar__logout-icon {
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ---------- Tagline ---------- */
+.pd-sidebar__tagline {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding: 20px 8px 8px;
+  color: #ffffff;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+.pd-sidebar__tagline-underline {
+  display: block;
+  width: 70%;
+  height: 2px;
+  background: #e88a2c;
+  margin-top: 6px;
+  border-radius: 2px;
+  transform: rotate(-2deg);
+}
+
+.pd-sidebar__wave {
+  position: absolute;
+  left: -20%;
+  bottom: -15%;
+  width: 140%;
+  height: 180px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  pointer-events: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .pd-sidebar {
+    display: none;
+  }
+}
